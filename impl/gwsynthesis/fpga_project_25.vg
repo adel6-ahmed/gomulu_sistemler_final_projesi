@@ -1,0 +1,83 @@
+//
+//Written by GowinSynthesis
+//Product Version "GowinSynthesis V1.9.8.10"
+//Sat May 27 20:58:57 2023
+
+//Source file index table:
+//file0 "\C:/Users/adell/Documents/fpga_project_25/src/lamps.v"
+`timescale 100 ps/100 ps
+module DarkRoomLighting (
+  clk,
+  reset,
+  button,
+  room_light
+)
+;
+input clk;
+input reset;
+input button;
+output [5:0] room_light;
+wire clk_d;
+wire reset_d;
+wire button_d;
+wire state;
+wire room_light_0_10;
+wire VCC;
+wire GND;
+  IBUF clk_ibuf (
+    .O(clk_d),
+    .I(clk) 
+);
+  IBUF reset_ibuf (
+    .O(reset_d),
+    .I(reset) 
+);
+  IBUF button_ibuf (
+    .O(button_d),
+    .I(button) 
+);
+  OBUF room_light_0_obuf (
+    .O(room_light[0]),
+    .I(room_light_0_10) 
+);
+  OBUF room_light_1_obuf (
+    .O(room_light[1]),
+    .I(room_light_0_10) 
+);
+  OBUF room_light_2_obuf (
+    .O(room_light[2]),
+    .I(room_light_0_10) 
+);
+  OBUF room_light_3_obuf (
+    .O(room_light[3]),
+    .I(room_light_0_10) 
+);
+  OBUF room_light_4_obuf (
+    .O(room_light[4]),
+    .I(room_light_0_10) 
+);
+  OBUF room_light_5_obuf (
+    .O(room_light[5]),
+    .I(room_light_0_10) 
+);
+  DFFC state_s4 (
+    .Q(state),
+    .D(button_d),
+    .CLK(clk_d),
+    .CLEAR(reset_d) 
+);
+defparam state_s4.INIT=1'b0;
+  INV room_light_0_s6 (
+    .O(room_light_0_10),
+    .I(state) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* DarkRoomLighting */

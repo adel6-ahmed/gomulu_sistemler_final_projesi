@@ -1,0 +1,27 @@
+//Copyright (C)2014-2022 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: 1.9.8.10
+//Part Number: GW1NR-LV9QN88PC6/I5
+//Device: GW1NR-9
+//Device Version: C
+//Created Time: Sat 05 27 09:13:58 2023
+
+IO_LOC "room_light[5]" 16;
+IO_PORT "room_light[5]" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "room_light[4]" 15;
+IO_PORT "room_light[4]" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "room_light[3]" 14;
+IO_PORT "room_light[3]" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "room_light[2]" 13;
+IO_PORT "room_light[2]" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "room_light[1]" 11;
+IO_PORT "room_light[1]" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "room_light[0]" 10;
+IO_PORT "room_light[0]" PULL_MODE=UP DRIVE=8 BANK_VCCIO=1.8;
+IO_LOC "button" 4;
+IO_PORT "button" PULL_MODE=UP BANK_VCCIO=1.8;
+IO_LOC "reset" 3;
+IO_PORT "reset" PULL_MODE=UP BANK_VCCIO=1.8;
+IO_LOC "clk" 52;
+IO_PORT "clk" PULL_MODE=UP BANK_VCCIO=1.8;

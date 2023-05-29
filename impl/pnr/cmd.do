@@ -1,0 +1,11 @@
+-d C:\Users\adell\Documents\fpga_project_25\impl\gwsynthesis\fpga_project_25.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst C:\Users\adell\Documents\fpga_project_25\src\fpga_project_25.cst
+-cfg C:\Users\adell\Documents\fpga_project_25\impl\pnr\device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-route_maxfan 23
